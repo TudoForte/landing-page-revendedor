@@ -1,0 +1,339 @@
+body {
+  color: #757575;
+}
+
+.disabled {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #eee;
+  background-image: linear-gradient(to bottom, #ffffff 0%, #eee 75%);
+  height: 175px;
+}
+
+.header-welcome {
+  height: 150px;
+}
+
+.header-title {
+  color: #fff;
+}
+
+.header-image {
+  width: 300px;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  line-height: normal;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.title > span {
+  font-size: 1.3rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  margin-bottom: -3px;
+  font-size: 0.75rem;
+  opacity: 0;
+  position: relative;
+}
+
+.info-active {
+  opacity: 1;
+}
+
+.info > img {
+  position: absolute;
+  right: -32px;
+}
+
+.wrapper-condition {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.col-form-label {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-align: right;
+}
+
+.title-form {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.date {
+  height: 40px;
+}
+
+.formulario {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 50%;
+}
+
+.termos {
+  font-size: 12px;
+  line-height: 20px;
+  color: #777;
+  text-align: justify;
+}
+
+.termos > a {
+  /* color: #777; */
+  text-decoration: underline;
+}
+
+.cadastrar {
+  margin: 0 auto;
+  display: block;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+  height: 150px;
+  background-color: #eee;
+  background-image: linear-gradient(to top, #ffffff 0%, #eee 75%);
+}
+
+.logo-rodape {
+  margin-top: 20px;
+  width: 200px;
+}
+
+.copyright {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #999;
+  line-height: 15px;
+  text-align: center;
+}
+
+.video {
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+
+.codigo-partner {
+  font-size: 1.5rem;
+}
+
+.password-partner {
+  font-size: 1.5rem;
+}
+
+.button-painel {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.wrapper-content {
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.title-welcome {
+  text-align: center;
+  font-size: 32px;
+  line-height: normal;
+  padding-top: 60px;
+  padding-bottom: 15px;
+  text-align: center;
+  color: #3453c4;
+}
+
+.title-welcome > span {
+  font-size: 1.3rem;
+}
+
+.tagline {
+  font-size: 1.3rem;
+}
+
+.title-codigo {
+  display: inline-block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.codigo-revendedor {
+  font-size: 3rem;
+  color: green;
+  padding: 10px;
+}
+
+.link-revendedor {
+  color: #021b79;
+}
+
+.linha {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.linha-baixo {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.title-video {
+  color: black;
+  padding-bottom: 10px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.title-youtube {
+  color: #3453c4;
+  padding-bottom: 0px;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.wrapper-youtube {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.modal-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #3453c4;
+}
+
+.modal-body {
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.modal-texto {
+  text-transform: uppercase;
+}
+
+.modal-botao {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 990px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    height: 75px;
+  }
+
+  .header-image {
+    width: 150px;
+  }
+
+  .header-title {
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  .formulario {
+    width: 100%;
+  }
+
+  .col-form-label {
+    text-align: left;
+  }
+
+  .title-welcome > span {
+    font-size: 2rem;
+  }
+
+  .info > img {
+    left: 80px;
+    top: 16px;
+  }
+
+  .copyright {
+    margin-left: 33px;
+    margin-right: 33px;
+    font-size: 0.58rem;
+  }
+
+  .wrapper-content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .title-welcome {
+    font-size: 1.5rem;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .title-codigo {
+    margin-top: 15px;
+  }
+
+  .video {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .wrapper-youtube {
+    width: 100%;
+  }
+
+  .title-video {
+    margin-top: 15px;
+  }
+}

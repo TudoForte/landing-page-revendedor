@@ -522,10 +522,10 @@
             afetará a concessão ou perda do benefício requerido.
           </p>
 
-          <label class="container" style="font-size: 0.8rem;"
+          <label class="wrapper-ipunt" style="font-size: 0.8rem;"
             >Estou ciente dos pontos acima e quero me tornar Parceiro
-            <input type="checkbox" style="opacity: 0;" id="auth" />
-            <span class="checkmark" id="auth2"></span>
+            <input type="checkbox" style="opacity: 0;" id="auth-input" />
+            <span class="checkmark" id="auth-span"></span>
           </label>
         </div>
         <div class="modal-footer">
@@ -543,23 +543,45 @@
   </div>
 
   <style>
+    .wrapper-ipunt {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /* Hide the browser's default checkbox */
+    .wrapper-ipunt input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
     /* Create a custom checkbox */
     .checkmark {
       position: absolute;
-      /* top: 0; */
-      left: 30px;
+      top: 0;
+      left: 20px;
       height: 20px;
       width: 20px;
       background-color: #eee;
     }
 
     /* On mouse-over, add a grey background color */
-    .container:hover input ~ .checkmark {
+    .wrapper-ipunt:hover input ~ .checkmark {
       background-color: #ccc;
     }
 
     /* When the checkbox is checked, add a blue background */
-    .container input:checked ~ .checkmark {
+    .wrapper-ipunt input:checked ~ .checkmark {
       background-color: #2196f3;
     }
 
@@ -571,12 +593,12 @@
     }
 
     /* Show the checkmark when checked */
-    .container input:checked ~ .checkmark:after {
+    .wrapper-ipunt input:checked ~ .checkmark:after {
       display: block;
     }
 
     /* Style the checkmark/indicator */
-    .container .checkmark:after {
+    .wrapper-ipunt .checkmark:after {
       left: 8px;
       top: 4px;
       width: 5px;
@@ -590,23 +612,23 @@
   </style>
 
   <script>
-    var auth = document.getElementById('auth');
+    var auth = document.getElementById('auth-input');
 
     auth.addEventListener('input', function (event) {
       if (auth.checked == true) {
-        console.log('estou aqui auth', auth.checked);
+        console.log('auth-input', auth.checked);
 
         document
           .getElementById('modal-button')
           .setAttribute('data-dismiss', 'modal');
 
-        document.getElementById('auth2').style.border = 'none';
-        document.getElementById('auth2').style.background = 'green';
+        document.getElementById('auth-span').style.border = 'none';
+        document.getElementById('auth-span').style.background = 'green';
       }
     });
 
     function myFunction() {
-      document.getElementById('auth2').style.border = '2px solid red';
+      document.getElementById('auth-span').style.border = '2px solid red';
     }
   </script>
 

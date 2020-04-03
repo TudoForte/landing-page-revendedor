@@ -600,12 +600,13 @@
           .getElementById('modal-button')
           .setAttribute('data-dismiss', 'modal');
 
+        document.getElementById('auth2').style.border = 'none';
         document.getElementById('auth2').style.background = 'green';
       }
     });
 
     function myFunction() {
-      document.getElementById('auth2').style.background = 'red';
+      document.getElementById('auth2').style.border = '2px solid red';
     }
   </script>
 

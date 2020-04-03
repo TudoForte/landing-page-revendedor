@@ -61,7 +61,7 @@
             <script>
               var email = document.getElementById('email');
 
-              email.addEventListener('input', function(event) {
+              email.addEventListener('input', function (event) {
                 console.log('email', !email.validity.patternMismatch);
 
                 if (!email.validity.patternMismatch) {
@@ -116,7 +116,7 @@
             <script>
               var cpf = document.getElementById('cpf');
 
-              cpf.addEventListener('input', function(event) {
+              cpf.addEventListener('input', function (event) {
                 console.log('cpf', cpf.validity.valid);
 
                 if (cpf.validity.valid) {
@@ -151,7 +151,7 @@
             <script>
               var fullname = document.getElementById('name');
 
-              fullname.addEventListener('input', function(event) {
+              fullname.addEventListener('input', function (event) {
                 console.log('fullname', fullname.validity.valid);
 
                 if (fullname.validity.valid) {
@@ -233,7 +233,7 @@
             <script>
               var phone = document.getElementById('phone');
 
-              phone.addEventListener('input', function(event) {
+              phone.addEventListener('input', function (event) {
                 console.log(phone.validity.valid);
 
                 if (phone.validity.valid) {
@@ -256,8 +256,8 @@
                   name="additional_data[zipcode]"
                   class="form-control"
                   type="text"
-                  pattern="\d{5}-\d{3}"
-                  placeholder="00000-000"
+                  pattern="\d{8}"
+                  placeholder="Informe Somente Número"
                   id="cep"
                   required
                 />
@@ -270,7 +270,7 @@
             <script>
               var cep = document.getElementById('cep');
 
-              cep.addEventListener('input', function(event) {
+              cep.addEventListener('input', function (event) {
                 console.log(cep.validity.valid);
 
                 if (cep.validity.valid) {
@@ -495,7 +495,13 @@
     crossorigin="anonymous"
   ></script>
 
-  <div class="modal" tabindex="-1" role="dialog" id="modal">
+  <div
+    class="modal"
+    tabindex="-1"
+    role="dialog"
+    id="modal"
+    data-backdrop="static"
+  >
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <img src="img/warning.svg" alt="" style="margin-top: 30px;" />
@@ -515,16 +521,16 @@
             em contato com um dos postos do INSS para tirar dúvidas se isso
             afetará a concessão ou perda do benefício requerido.
           </p>
-          <p class="modal-texto">
-            <input type="radio" />
-            Estou ciente dos pontos acima e quero me tornar Parceiro Tudo Forte
+          <p class="modal-texto" style="font-size: 0.8rem;">
+            <input type="radio" id="auth" />
+            Estou ciente dos pontos acima e quero me tornar Parceiro
           </p>
         </div>
         <div class="modal-footer">
           <button
+            id="modal-button"
             type="button"
             class="btn btn-primary modal-botao"
-            data-dismiss="modal"
           >
             Continuar
           </button>
@@ -533,8 +539,22 @@
     </div>
   </div>
 
+  <script>
+    var auth = document.getElementById('auth');
+
+    auth.addEventListener('input', function (event) {
+      if (auth.checked == true) {
+        console.log('estou aqui auth', auth.checked);
+
+        document
+          .getElementById('modal-button')
+          .setAttribute('data-dismiss', 'modal');
+      }
+    });
+  </script>
+
   <script type="text/javascript">
-    $(window).on('load', function() {
+    $(window).on('load', function () {
       $('#modal').modal('show');
     });
   </script>

@@ -129,126 +129,6 @@
               });
             </script>
 
-            <!-- CHECKBOX 
-          <div class="form-group row">
-            <label for="is_company" class="col-md-2 col-form-label">Possui CNPJ?</label>
-            <div class="col-md-12 col-lg-10 wrapper-condition">
-              <div class="form-check form-check-inline">
-                <input name="additional_data[is_company]" class="form-check-input" type="radio" id="company_yes" value="sim" onclick="companyActive()" />
-                <label class="form-check-label" for="company">Sim</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input name="additional_data[is_company]" class="form-check-input" type="radio" id="company_no" value="não" onclick="companyInactive()" />
-                <label class="form-check-label" for="company">Não</label>
-                <small id="smile" class="info">Ok, continue preenchendo normalmente
-                  <img src="img/smile.svg" alt="Smile" width="25px" />
-                </small>
-              </div>
-            </div>
-          </div>
-
-          <script>
-            function companyActive() {
-              var company_yes = document.getElementById('company_yes');
-
-              if (company_yes.checked == true) {
-                document
-                  .getElementById('wrapper-company')
-                  .classList.add('active');
-
-                document
-                  .getElementById('smile')
-                  .classList.remove('info-active');
-              }
-            }
-
-            function companyInactive() {
-              var company_no = document.getElementById('company_no');
-
-              if (company_no.checked == true) {
-                document
-                  .getElementById('wrapper-company')
-                  .classList.remove('active');
-
-                document.getElementById('smile').classList.add('info-active');
-              }
-            }
-          </script>
-
-         
-
-            <div id="wrapper-company" class="disabled">
-              <h3 class="title-form">Dados Empresa</h3>
-
-             
-              <div class="form-group row">
-                <label for="name_company" class="col-md-2 col-form-label"
-                  >Nome da Empresa</label
-                >
-                <div class="col-md-12 col-lg-10">
-                  <input
-                    name="additional_data[name_company]"
-                    type="text"
-                    class="form-control"
-                    id="name_company"
-                    placeholder="Nome da Empresa"
-                    required
-                  />
-                </div>
-              </div>
-
-              <script>
-                var name_company = document.getElementById('name_company');
-
-                name_company.addEventListener('input', function(event) {
-                  console.log('name_company', name_company.validity.valid);
-
-                  if (name_company.validity.valid) {
-                    name_company.style.borderColor = '#28a745';
-                  } else {
-                    name_company.style.borderColor = 'red';
-                  }
-                });
-              </script>
-
-              
-              <div class="form-group row">
-                <label for="cnpj" class="col-md-2 col-form-label">CNPJ</label>
-                <div class="col-md-12 col-lg-6">
-                  <input
-                    name="additional_data[cnpj]"
-                    type="text"
-                    class="form-control"
-                    id="cnpj"
-                    pattern="(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})"
-                    placeholder="00.000.000/0000-00"
-                    required
-                  />
-                  <div class="valid-feedback">
-                    Parece bom!
-                  </div>
-                </div>
-              </div>
-
-              <script>
-                var cnpj = document.getElementById('cnpj');
-
-                cnpj.addEventListener('input', function(event) {
-                  console.log('cnpj', cpf.validity.valid);
-
-                  if (cnpj.validity.valid) {
-                    cnpj.style.borderColor = '#28a745';
-                    cnpj.classList.add('is-valid');
-                  } else {
-                    cnpj.classList.remove('is-valid');
-                    cnpj.style.borderColor = 'red';
-                  }
-                });
-              </script>
-            </div>
-
-            -->
-
             <h3 class="title-form">Dados Pessoais</h3>
 
             <!-- FULL NAME -->
@@ -618,6 +498,7 @@
   <div class="modal" tabindex="-1" role="dialog" id="modal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
+        <img src="img/warning.svg" alt="" style="margin-top: 30px;" />
         <div class="modal-header">
           <h5 class="modal-title">
             Temos um recado importante antes de você prosseguir seu cadastro
@@ -626,14 +507,18 @@
         <div class="modal-body">
           <p>
             Caso esteja recebendo ou necessite dar entrada em algum benefício do
-            INSS como por exemplo: seguro desemprego, auxílio maternidade, bolsa
-            família entre outros, orientamos que antes de torna-se parceiro Tudo
-            Forte, que entre em contato com um dos postos do INSS para tirar
-            dúvidas se isso afetará a concessão ou perda do benefício requerido.
+            INSS como por exemplo:
+            <strong
+              >seguro desemprego, auxílio maternidade, bolsa família entre
+              outros</strong
+            >, orientamos que antes de torna-se parceiro Tudo Forte, que entre
+            em contato com um dos postos do INSS para tirar dúvidas se isso
+            afetará a concessão ou perda do benefício requerido.
           </p>
-          <strong class="modal-texto">
+          <p class="modal-texto">
+            <input type="radio" />
             Estou ciente dos pontos acima e quero me tornar Parceiro Tudo Forte
-          </strong>
+          </p>
         </div>
         <div class="modal-footer">
           <button

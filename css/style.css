@@ -2,6 +2,26 @@ body {
   color: #757575;
 }
 
+.modal-header {
+  border-bottom: 0;
+}
+
+.modal {
+  top: 10%;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    top: 0;
+  }
+}
+
+.modal-footer {
+  border-top: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
 .disabled {
   display: none;
 }
@@ -240,17 +260,20 @@ body {
 .modal-title {
   text-align: center;
   text-transform: uppercase;
-  color: #3453c4;
+  color: #0a4c89;
 }
 
 .modal-body {
   text-align: center;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  padding: 0;
 }
 
 .modal-texto {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+  font-size: 1rem;
 }
 
 .modal-botao {

@@ -213,7 +213,7 @@
 
             <!-- PHONE -->
             <div class="form-group row">
-              <label for="phone" class="col-2 col-form-label">Telefone</label>
+              <label for="phone" class="col-2 col-form-label">Celular</label>
               <div class="col-md-12 col-lg-10">
                 <input
                   name="whatsapp"
@@ -521,16 +521,19 @@
             em contato com um dos postos do INSS para tirar dúvidas se isso
             afetará a concessão ou perda do benefício requerido.
           </p>
-          <p class="modal-texto" style="font-size: 0.8rem;">
-            <input type="radio" id="auth" />
-            Estou ciente dos pontos acima e quero me tornar Parceiro
-          </p>
+
+          <label class="container" style="font-size: 0.8rem;"
+            >Estou ciente dos pontos acima e quero me tornar Parceiro
+            <input type="checkbox" style="opacity: 0;" id="auth" />
+            <span class="checkmark" id="auth2"></span>
+          </label>
         </div>
         <div class="modal-footer">
           <button
             id="modal-button"
             type="button"
             class="btn btn-primary modal-botao"
+            onclick="myFunction()"
           >
             Continuar
           </button>
@@ -538,6 +541,53 @@
       </div>
     </div>
   </div>
+
+  <style>
+    /* Create a custom checkbox */
+    .checkmark {
+      position: absolute;
+      /* top: 0; */
+      left: 30px;
+      height: 20px;
+      width: 20px;
+      background-color: #eee;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .container:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked ~ .checkmark {
+      background-color: #2196f3;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+      content: '';
+      position: absolute;
+      display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .container .checkmark:after {
+      left: 8px;
+      top: 4px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  </style>
 
   <script>
     var auth = document.getElementById('auth');
@@ -549,8 +599,14 @@
         document
           .getElementById('modal-button')
           .setAttribute('data-dismiss', 'modal');
+
+        document.getElementById('auth2').style.background = 'green';
       }
     });
+
+    function myFunction() {
+      document.getElementById('auth2').style.background = 'red';
+    }
   </script>
 
   <script type="text/javascript">

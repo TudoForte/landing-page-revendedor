@@ -103,31 +103,16 @@
                   type="text"
                   class="form-control"
                   id="cpf"
-                  pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})"
-                  placeholder="000.000.000-00"
+                  placeholder="Somente Número"
                   required
+                  onkeydown="javascript: fMasc( this, mCPF );"
                 />
+
                 <div class="valid-feedback">
                   Parece bom!
                 </div>
               </div>
             </div>
-
-            <script>
-              var cpf = document.getElementById('cpf');
-
-              cpf.addEventListener('input', function (event) {
-                console.log('cpf', cpf.validity.valid);
-
-                if (cpf.validity.valid) {
-                  cpf.style.borderColor = '#28a745';
-                  cpf.classList.add('is-valid');
-                } else {
-                  cpf.classList.remove('is-valid');
-                  cpf.style.borderColor = 'red';
-                }
-              });
-            </script>
 
             <h3 class="title-form">Dados Pessoais</h3>
 
@@ -218,11 +203,11 @@
                 <input
                   name="whatsapp"
                   class="form-control"
-                  type="tel"
-                  pattern="(^|\()?\s*(\d{2})\s*(\s|\))*(9?\d{5})(\s|-)?(\d{4})($|\n)"
-                  placeholder="(00)00000-0000"
+                  type="text"
+                  placeholder="Somente Número"
                   id="phone"
                   required
+                  onkeydown="javascript: fMasc( this, mTel );"
                 />
                 <div class="valid-feedback">
                   Parece bom!
@@ -230,7 +215,7 @@
               </div>
             </div>
 
-            <script>
+            <!-- <script>
               var phone = document.getElementById('phone');
 
               phone.addEventListener('input', function (event) {
@@ -244,7 +229,7 @@
                   phone.style.borderColor = 'red';
                 }
               });
-            </script>
+            </script> -->
 
             <h3 class="title-form">Endereço</h3>
 
@@ -256,10 +241,10 @@
                   name="additional_data[zipcode]"
                   class="form-control"
                   type="text"
-                  pattern="\d{8}"
-                  placeholder="Informe Somente Número"
+                  placeholder="Somente Número"
                   id="cep"
                   required
+                  onkeydown="javascript: fMasc( this, mCEP );"
                 />
                 <div class="valid-feedback">
                   Parece bom!
@@ -267,7 +252,7 @@
               </div>
             </div>
 
-            <script>
+            <!-- <script>
               var cep = document.getElementById('cep');
 
               cep.addEventListener('input', function (event) {
@@ -281,7 +266,7 @@
                   cep.style.borderColor = 'red';
                 }
               });
-            </script>
+            </script> -->
 
             <!-- ADRESS -->
             <div class="form-group row">
@@ -522,7 +507,7 @@
             afetará a concessão ou perda do benefício requerido.
           </p>
 
-          <label class="wrapper-ipunt" style="font-size: 0.8rem;"
+          <label class="wrapper-input" style="font-size: 0.8rem;"
             >Estou ciente dos pontos acima e quero me tornar Parceiro
             <input type="checkbox" style="opacity: 0;" id="auth-input" />
             <span class="checkmark" id="auth-span"></span>
@@ -534,6 +519,7 @@
             type="button"
             class="btn btn-primary modal-botao"
             onclick="myFunction()"
+            onclick="executeExample('chainingModals')"
           >
             Continuar
           </button>
@@ -543,7 +529,7 @@
   </div>
 
   <style>
-    .wrapper-ipunt {
+    .wrapper-input {
       display: block;
       position: relative;
       padding-left: 35px;
@@ -557,7 +543,7 @@
     }
 
     /* Hide the browser's default checkbox */
-    .wrapper-ipunt input {
+    .wrapper-input input {
       position: absolute;
       opacity: 0;
       cursor: pointer;
@@ -576,12 +562,12 @@
     }
 
     /* On mouse-over, add a grey background color */
-    .wrapper-ipunt:hover input ~ .checkmark {
+    .wrapper-input:hover input ~ .checkmark {
       background-color: #ccc;
     }
 
     /* When the checkbox is checked, add a blue background */
-    .wrapper-ipunt input:checked ~ .checkmark {
+    .wrapper-input input:checked ~ .checkmark {
       background-color: #2196f3;
     }
 
@@ -593,12 +579,12 @@
     }
 
     /* Show the checkmark when checked */
-    .wrapper-ipunt input:checked ~ .checkmark:after {
+    .wrapper-input input:checked ~ .checkmark:after {
       display: block;
     }
 
     /* Style the checkmark/indicator */
-    .wrapper-ipunt .checkmark:after {
+    .wrapper-input .checkmark:after {
       left: 8px;
       top: 4px;
       width: 5px;
@@ -630,11 +616,78 @@
     function myFunction() {
       document.getElementById('auth-span').style.border = '2px solid red';
     }
+
+    (function () {
+      var btnSetItem = document.querySelector('.wrapper-input');
+
+      function setLocalStorage() {
+        btnSetItem.addEventListener('click', () => {
+          localStorage.setItem('modal', true);
+        });
+      }
+
+      setLocalStorage();
+    })();
+  </script>
+
+  <script>
+    function fMasc(objeto, mascara) {
+      obj = objeto;
+      masc = mascara;
+      setTimeout('fMascEx()', 1);
+    }
+    function fMascEx() {
+      obj.value = masc(obj.value);
+    }
+    function mTel(tel) {
+      tel = tel.replace(/\D/g, '');
+      tel = tel.replace(/^(\d)/, '($1');
+      tel = tel.replace(/(.{3})(\d)/, '$1)$2');
+      if (tel.length == 9) {
+        tel = tel.replace(/(.{1})$/, '-$1');
+      } else if (tel.length == 10) {
+        tel = tel.replace(/(.{2})$/, '-$1');
+      } else if (tel.length == 11) {
+        tel = tel.replace(/(.{3})$/, '-$1');
+      } else if (tel.length == 12) {
+        tel = tel.replace(/(.{4})$/, '-$1');
+      } else if (tel.length > 12) {
+        tel = tel.replace(/(.{4})$/, '-$1');
+      }
+      return tel;
+    }
+    function mCNPJ(cnpj) {
+      cnpj = cnpj.replace(/\D/g, '');
+      cnpj = cnpj.replace(/^(\d{2})(\d)/, '$1.$2');
+      cnpj = cnpj.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
+      cnpj = cnpj.replace(/\.(\d{3})(\d)/, '.$1/$2');
+      cnpj = cnpj.replace(/(\d{4})(\d)/, '$1-$2');
+      return cnpj;
+    }
+    function mCPF(cpf) {
+      cpf = cpf.replace(/\D/g, '');
+      cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+      cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+      cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+      return cpf;
+    }
+    function mCEP(cep) {
+      cep = cep.replace(/\D/g, '');
+      cep = cep.replace(/^(\d{2})(\d)/, '$1.$2');
+      cep = cep.replace(/\.(\d{3})(\d)/, '.$1-$2');
+      return cep;
+    }
+    function mNum(num) {
+      num = num.replace(/\D/g, '');
+      return num;
+    }
   </script>
 
   <script type="text/javascript">
     $(window).on('load', function () {
-      $('#modal').modal('show');
+      if (localStorage.getItem('modal') === null) {
+        $('#modal').modal('show');
+      }
     });
   </script>
 </html>

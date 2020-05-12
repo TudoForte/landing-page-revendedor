@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/favicon.png" />
-    <title>Parceiro Tudo Forte</title>
-    <link rel="stylesheet" href="css/reset.css" />
-
+    <title>Parceiros Tudo Forte</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -17,6 +14,80 @@
   </head>
 
   <body>
+    <style>
+      .container {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      table {
+        width: 600px;
+        border-collapse: collapse;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      th {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 10px;
+        background-color: #377aea;
+        color: #fff;
+      }
+
+      td {
+        padding: 20px 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: black;
+        text-align: center;
+        position: relative;
+      }
+
+      span {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(55, 122, 234, 75%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 35%;
+        color: #fff;
+        opacity: 0;
+      }
+
+      span:hover {
+        opacity: 1;
+      }
+
+      tr {
+        border-bottom: 1px solid #377aea;
+      }
+
+      .post {
+        width: 120px;
+      }
+
+      @media (max-width: 460px) {
+        table {
+          width: 100%;
+        }
+
+        th {
+          font-size: 1rem;
+        }
+
+        td {
+          padding: 10px;
+        }
+
+        .post {
+          width: 40px;
+        }
+      }
+    </style>
+
     <header class="header">
       <img
         class="header-image"
@@ -25,428 +96,299 @@
       />
     </header>
 
-    <div class="container d-flex justify-content-center">
-      <div class="row">
-        <div class="col">
-          <h2 class="title">
-            Parabéns, você está perto de ser Parceiro da Maior Loja de Segurança
-            Eletrônica do Brasil.
-          </h2>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="4">Banners para Divulgar, Vender e Lucrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="img/post/post21.png" download>
+                <img src="img/post/post21.png" alt="post" class="post" />
 
-          <form
-            class="formulario needs-validation"
-            action="https://interno.hubseg.com.br/api/partners/create"
-            aria-label="Registrar"
-            method="POST"
-          >
-            <!-- EMAIL -->
-            <div class="form-group row">
-              <label for="email" class="col-md-2 col-form-label">Email</label>
-              <div class="col-md-12 col-lg-10">
-                <input
-                  name="email"
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="Email"
-                  pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
-                  required
-                />
-                <div class="valid-feedback">
-                  Parece bom!
-                </div>
-              </div>
-            </div>
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post22.png" download>
+                <img src="img/post/post22.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post23.png" download>
+                <img src="img/post/post23.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post24.png" download>
+                <img src="img/post/post24.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+          </tr>
 
-            <script>
-              var email = document.getElementById('email');
+          <tr>
+            <td>
+              <a href="img/post/post25.png" download>
+                <img src="img/post/post25.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post26.png" download>
+                <img src="img/post/post26.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post27.png" download>
+                <img src="img/post/post27.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post28.png" download>
+                <img src="img/post/post28.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+          </tr>
 
-              email.addEventListener('input', function (event) {
-                console.log('email', !email.validity.patternMismatch);
+          <tr>
+            <td>
+              <a href="img/post/post29.png" download>
+                <img src="img/post/post29.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post30.png" download>
+                <img src="img/post/post30.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post31.png" download>
+                <img src="img/post/post31.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post32.png" download>
+                <img src="img/post/post32.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+          </tr>
 
-                if (!email.validity.patternMismatch) {
-                  email.setCustomValidity('');
-                  email.style.borderColor = '#28a745';
-                  email.classList.add('is-valid');
-                } else {
-                  email.setCustomValidity('Por favor informe um email válido');
-                  email.style.borderColor = 'red';
-                  email.classList.remove('is-valid');
-                }
-              });
-            </script>
+          <tr>
+            <td>
+              <a href="img/post/post1.png" download>
+                <img src="img/post/post1.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post2.png" download>
+                <img src="img/post/post2.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post3.png" download>
+                <img src="img/post/post3.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post4.png" download>
+                <img src="img/post/post4.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+          </tr>
 
-            <!-- CHECKBOX EMAIL MARKETING -->
-            <div class="form-group row justify-content-center">
-              <div class="col-md-12 col-lg-8">
-                <div class="form-check">
-                  <input
-                    name="additional_data[email-makerting]"
-                    class="form-check-input"
-                    type="checkbox"
-                    id="email-makerting"
-                    checked
-                  />
-                  <label class="form-check-label" for="email-makerting">
-                    Aceito receber e-mails de Tudo Forte
-                  </label>
-                </div>
-              </div>
-            </div>
+          <tr>
+            <td>
+              <a href="img/post/post5.png" download>
+                <img src="img/post/post5.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post6.png" download>
+                <img src="img/post/post6.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post7.png" download>
+                <img src="img/post/post7.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post8.png" download>
+                <img src="img/post/post8.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+          </tr>
 
-            <!-- CPF -->
-            <div class="form-group row">
-              <label for="cpf" class="col-md-2 col-form-label">CPF</label>
-              <div class="col-md-12 col-lg-6">
-                <input
-                  name="additional_data[cpf]"
-                  type="text"
-                  class="form-control"
-                  id="cpf"
-                  placeholder="Somente Número"
-                  required
-                  onkeydown="javascript: fMasc( this, mCPF );"
-                />
+          <tr>
+            <td>
+              <a href="img/post/post9.png" download>
+                <img src="img/post/post9.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post10.png" download>
+                <img src="img/post/post10.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post11.png" download>
+                <img src="img/post/post11.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post12.png" download>
+                <img src="img/post/post12.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+          </tr>
 
-                <div class="valid-feedback">
-                  Parece bom!
-                </div>
-              </div>
-            </div>
+          <tr>
+            <td>
+              <a href="img/post/post13.png" download>
+                <img src="img/post/post13.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post14.png" download>
+                <img src="img/post/post14.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post15.png" download>
+                <img src="img/post/post15.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post16.png" download>
+                <img src="img/post/post16.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+          </tr>
 
-            <h3 class="title-form">Dados Pessoais</h3>
+          <tr>
+            <td>
+              <a href="img/post/post17.png" download>
+                <img src="img/post/post17.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post18.png" download>
+                <img src="img/post/post18.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post19.png" download>
+                <img src="img/post/post19.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+            <td>
+              <a href="img/post/post20.png" download>
+                <img src="img/post/post20.png" alt="post" class="post" />
+                <span>Clique e Faça Download</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-            <!-- FULL NAME -->
-            <div class="form-group row">
-              <label for="name" class="col-md-2 col-form-label"
-                >Nome Completo</label
-              >
-              <div class="col-md-12 col-lg-10">
-                <input
-                  name="name"
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  placeholder="Nome"
-                  required
-                />
-              </div>
-            </div>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="4">
+              Aprenda a Vender Com os Vídeos do Parceiro Tudo Forte
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4">
+              <a target="_blank" href="https://youtu.be/jgc4ulh1r10">
+                Como Compartilhar produtos nas Redes Sociais
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <a target="_blank" href="https://youtu.be/o2UoT_5RhfI">
+                Como Gerar Orçamento pelo Celular
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <a target="_blank" href="https://youtu.be/Nt8dV6MoHb8">
+                Como Gerar Orçamento pelo Computador
+              </a>
+            </td>
+          </tr>
 
-            <script>
-              var fullname = document.getElementById('name');
+          <tr>
+            <td colspan="4">
+              <a target="_blank" href="https://youtu.be/BmIc6cxUAuQ">
+                Como Compartilhar produtos no Facebook pelo Celular
+              </a>
+            </td>
+          </tr>
 
-              fullname.addEventListener('input', function (event) {
-                console.log('fullname', fullname.validity.valid);
+          <tr>
+            <td colspan="4">
+              <a target="_blank" href="https://youtu.be/3ctfISb9qzM">
+                Como Compartilhar produtos no Facebook pelo Computador
+              </a>
+            </td>
+          </tr>
 
-                if (fullname.validity.valid) {
-                  fullname.style.borderColor = '#28a745';
-                } else {
-                  fullname.style.borderColor = 'red';
-                }
-              });
-            </script>
+          <tr>
+            <td colspan="4">
+              <a target="_blank" href="https://youtu.be/1AnoS-rcfJQ">
+                Como Compartilhar produtos no WhatsApp pelo Celular
+              </a>
+            </td>
+          </tr>
 
-            <!-- GENER -->
-            <div class="form-group row">
-              <label for="gener" class="col-md-2 col-form-label">Sexo</label>
-              <div class="col-md-12 col-lg-10">
-                <div class="form-check form-check-inline">
-                  <input
-                    name="additional_data[gender]"
-                    class="form-check-input"
-                    type="radio"
-                    id="id_gender_0"
-                    value="masculino"
-                  />
-                  <label class="form-check-label" for="id_gender_0"
-                    >Masculino</label
-                  >
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    name="additional_data[gender]"
-                    class="form-check-input"
-                    type="radio"
-                    id="id_gender_1"
-                    value="feminino"
-                  />
-                  <label class="form-check-label" for="id_gender_1"
-                    >Feminino</label
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- DATE -->
-            <div class="form-group row">
-              <label for="date" class="col-md-12 col-lg-2 col-form-label"
-                >Data de Nascimento</label
-              >
-              <div class="col-md-12 col-lg-10">
-                <input
-                  name="additional_data[birthday]"
-                  class="form-control date"
-                  type="date"
-                  value=""
-                  placeholder="dd/mm/aaaa"
-                  id="example-date-input"
-                  required
-                />
-              </div>
-            </div>
-
-            <!-- PHONE -->
-            <div class="form-group row">
-              <label for="phone" class="col-2 col-form-label">Celular</label>
-              <div class="col-md-12 col-lg-10">
-                <input
-                  name="whatsapp"
-                  class="form-control"
-                  type="text"
-                  placeholder="Somente Número"
-                  id="phone"
-                  required
-                  onkeydown="javascript: fMasc( this, mTel );"
-                />
-                <div class="valid-feedback">
-                  Parece bom!
-                </div>
-              </div>
-            </div>
-
-            <!-- <script>
-              var phone = document.getElementById('phone');
-
-              phone.addEventListener('input', function (event) {
-                console.log(phone.validity.valid);
-
-                if (phone.validity.valid) {
-                  phone.style.borderColor = '#28a745';
-                  phone.classList.add('is-valid');
-                } else {
-                  phone.classList.remove('is-valid');
-                  phone.style.borderColor = 'red';
-                }
-              });
-            </script> -->
-
-            <h3 class="title-form">Endereço</h3>
-
-            <!-- CEP -->
-            <div class="form-group row">
-              <label for="cep" class="col-2 col-form-label">CEP</label>
-              <div class="col-md-12 col-lg-10">
-                <input
-                  name="additional_data[zipcode]"
-                  class="form-control"
-                  type="text"
-                  placeholder="Somente Número"
-                  id="cep"
-                  required
-                  onkeydown="javascript: fMasc( this, mCEP );"
-                />
-                <div class="valid-feedback">
-                  Parece bom!
-                </div>
-              </div>
-            </div>
-
-            <!-- <script>
-              var cep = document.getElementById('cep');
-
-              cep.addEventListener('input', function (event) {
-                console.log(cep.validity.valid);
-
-                if (cep.validity.valid) {
-                  cep.style.borderColor = '#28a745';
-                  cep.classList.add('is-valid');
-                } else {
-                  cep.classList.remove('is-valid');
-                  cep.style.borderColor = 'red';
-                }
-              });
-            </script> -->
-
-            <!-- ADRESS -->
-            <div class="form-group row">
-              <label for="end" class="col-2 col-form-label">Endereço</label>
-              <div class="col-md-12 col-lg-10">
-                <input
-                  name="additional_data[address]"
-                  class="form-control"
-                  type="text"
-                  id="end"
-                  required
-                />
-              </div>
-            </div>
-
-            <!-- NUMBER -->
-            <div class="form-group row">
-              <label for="number" class="col-md-12 col-lg-2 col-form-label"
-                >Número</label
-              >
-              <div class="col-md-12 col-lg-3">
-                <input
-                  name="additional_data[address_number]"
-                  type="text"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <label for="complement" class="col-md-12 col-lg-2 col-form-label"
-                >Complemento</label
-              >
-              <div class="col-md-12 col-lg-5">
-                <input
-                  name="additional_data[address_info]"
-                  type="text"
-                  class="form-control"
-                />
-              </div>
-            </div>
-
-            <!-- DISTRICT -->
-
-            <div class="form-group row">
-              <label for="district" class="col-2 col-form-label">Bairro</label>
-              <div class="col-md-12 col-lg-10">
-                <input
-                  name="additional_data[address_district]"
-                  type="text"
-                  class="form-control"
-                  required
-                />
-              </div>
-            </div>
-
-            <!-- STATE -->
-            <div class="form-group row">
-              <label for="city" class="col-2 col-form-label">Cidade</label>
-              <div class="col-md-12 col-lg-10">
-                <input
-                  name="additional_data[city]"
-                  type="text"
-                  class="form-control"
-                  required
-                />
-              </div>
-            </div>
-
-            <!-- UF -->
-            <div class="form-group row">
-              <label for="state" class="col-2 col-form-label">Estado</label>
-              <div class="col-md-12 col-lg-6">
-                <select
-                  name="additional_data[state]"
-                  id="state"
-                  class="col-md-12 col-lg-12 form-control"
-                  required
-                >
-                  <option selected>Escolher...</option>
-                  <option value="RO">Rondônia</option>
-                  <option value="AC">Acre</option>
-                  <option value="AM">Amazonas</option>
-                  <option value="RR">Roraima</option>
-                  <option value="PA">Pará</option>
-                  <option value="AP">Amapá</option>
-                  <option value="TO">Tocantins</option>
-                  <option value="MA">Maranhão</option>
-                  <option value="PI">Piauí</option>
-                  <option value="CE">Ceará</option>
-                  <option value="RN">Rio Grande do Norte</option>
-                  <option value="PB">Paraíba</option>
-                  <option value="PE">Pernambuco</option>
-                  <option value="AL">Alagoas</option>
-                  <option value="SE">Sergipe</option>
-                  <option value="BA">Bahia</option>
-                  <option value="MG">Minas Gerais</option>
-                  <option value="ES">Espírito Santo</option>
-                  <option value="RJ">Rio de Janeiro</option>
-                  <option value="SP">São Paulo</option>
-                  <option value="PR">Paraná</option>
-                  <option value="SC">Santa Catarina</option>
-                  <option value="RS">Rio Grande do Sul</option>
-                  <option value="MS">Mato Grosso do Sul</option>
-                  <option value="MT">Mato Grosso</option>
-                  <option value="GO">Goiás</option>
-                  <option value="DF">Distrito Federal</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <div class="col-12">
-                <div class="form-check">
-                  <input
-                    name="additional_data[terms_0]"
-                    class="form-check-input"
-                    type="checkbox"
-                    id="terms_0"
-                    required
-                  />
-                  <label class="form-check-label termos" for="terms_0">
-                    Li, compreendi e manifesto expressamente minha ciência que
-                    para solicitar o resgate das comissões, será necessário ter
-                    no mínimo R$ 50,00 de saldo confirmado e também ter
-                    finalizado meu cadastro de recebimento seguindo esta
-                    <a href="#">DOCUMENTAÇÃO</a>
-                    juntamente com a Tudo Forte.
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <!-- AUTHORIZATION -->
-            <div class="form-group row">
-              <div class="col-12">
-                <div class="form-check">
-                  <input
-                    name="additional_data[terms_1]"
-                    class="form-check-input"
-                    type="checkbox"
-                    id="terms_1"
-                    required
-                  />
-                  <label class="form-check-label termos" for="terms_1">
-                    Li, compreendi e manifesto expressamente minha ciência e
-                    concordância com as disposições contidas no
-                    <a
-                      href="https://link.pipefy.com/wf/click?upn=HOVDmhBtTivUaDJmgZxhjYsih4TEN3P1hltqMA-2Fdekm3RWEi7tRZoVc5xoYmiF9RzB-2BFVzDsiGVYzeWDaA69QcjgMSK-2BrRsavDoZtBA4nW16SuhIYLXh73BXppgpZgSEhM-2Bhy2xV-2FzeN0rFpzsPkb0t3Bfnjvw1R-2BJOfQm7jbsog-2FcPlOP3cO3Y5IvBKwvLKMEvY6YzTV9HG35g3UDPBv8G7necIrhgw0Bm3bJJSgvw-3D_00ybvC7a4WuneSiy0BctfYjuuO8SKeiy3K5G1L03bi-2FCdvJeEdH7k9r4HVKoK-2F8BWpc6-2FNjERClqfiNdDdpoYKXh5UrSYj-2Bz4eeVbhD0UEXaw4LpzRI4kqjuGYwXANzg5E701fNxcdoUVWey7qYf6T13AkAvNrNUwjDFfsa2D252OKDze3LKw7NAsc-2F4ve6cD1Jp7Js0VGoqxMQKFJzmLg4iwrzDF5o6-2FJrNuhjLBrE-3D"
-                      >CONTRATO DE DIVULGADOR</a
-                    >,
-                    <a
-                      href="https://link.pipefy.com/wf/click?upn=HOVDmhBtTivUaDJmgZxhjYsih4TEN3P1hltqMA-2Fdekm3RWEi7tRZoVc5xoYmiF9RzB-2BFVzDsiGVYzeWDaA69QUQBNaFj2p3Q3o0ZIXfuzPd-2B3UH8mEWOeu7vWbEVltG7FozfMafi6aMPZ4pr9cnC1fZ3XA2c24UR6flOd06TO2FO-2Fmm8epY9YebIjV5L1K6RtkrWAbal3-2FcruMaZz6GjDA-3D-3D_00ybvC7a4WuneSiy0BctfYjuuO8SKeiy3K5G1L03bi-2FCdvJeEdH7k9r4HVKoK-2F8BWpc6-2FNjERClqfiNdDdpoYJmsPC8VK7HCExaiumvTeiXkSANUD4yBzfUoK0fnSPP1TzCHeRDO-2FXrSOgHwqxZQvPmBKoce8-2FPraMOWnxSpfSjz7TZqlCv11TTx8HzFkGlaWMqgelN9xUggzS8XFCLdPTNGpyKUwkb3iUgMvzi581s-3D"
-                      >TERMO DE USO</a
-                    >, ao qual estarei sujeito caso meu cadastro e perfil seja
-                    aprovado pela Tudo Forte.
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <input
-              type="hidden"
-              value="5575d5b8-da0f-11e8-bef0-0aa6f9202bba"
-              name="store"
-            />
-
-            <div class="form-group row">
-              <div class="col-12">
-                <button
-                  type="submit"
-                  class="btn btn-success cadastrar"
-                  name="register"
-                  value="Cadastrar"
-                >
-                  Cadastrar!
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
+          <tr>
+            <td colspan="4">
+              <a target="_blank" href="https://youtu.be/Y1Vb8mV4TnM">
+                Como Compartilhar produtos no WhatsApp pelo Computador
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <footer class="footer">
@@ -462,238 +404,22 @@
         - São José do Rio Preto - SP
       </p>
     </footer>
-  </body>
 
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"
-  ></script>
+    <script>
+      var acc = document.getElementsByClassName('accordion');
+      var i;
 
-  <div
-    class="modal"
-    tabindex="-1"
-    role="dialog"
-    id="modal"
-    data-backdrop="static"
-  >
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <img src="img/warning.svg" alt="" style="margin-top: 30px;" />
-        <div class="modal-header">
-          <h5 class="modal-title">
-            Temos um recado importante antes de você prosseguir seu cadastro
-          </h5>
-        </div>
-        <div class="modal-body">
-          <p>
-            Caso esteja recebendo ou necessite dar entrada em algum benefício do
-            INSS como por exemplo:
-            <strong
-              >seguro desemprego, auxílio maternidade, bolsa família entre
-              outros</strong
-            >, orientamos que antes de torna-se parceiro Tudo Forte, que entre
-            em contato com um dos postos do INSS para tirar dúvidas se isso
-            afetará a concessão ou perda do benefício requerido.
-          </p>
-
-          <label class="wrapper-input" style="font-size: 0.8rem;"
-            >Estou ciente dos pontos acima e quero me tornar Parceiro
-            <input type="checkbox" style="opacity: 0;" id="auth-input" />
-            <span class="checkmark" id="auth-span"></span>
-          </label>
-        </div>
-        <div class="modal-footer">
-          <button
-            id="modal-button"
-            type="button"
-            class="btn btn-primary modal-botao"
-            onclick="myFunction()"
-            onclick="executeExample('chainingModals')"
-          >
-            Continuar
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <style>
-    .wrapper-input {
-      display: block;
-      position: relative;
-      padding-left: 35px;
-      margin-bottom: 12px;
-      cursor: pointer;
-      font-size: 22px;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    /* Hide the browser's default checkbox */
-    .wrapper-input input {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
-      width: 0;
-    }
-
-    /* Create a custom checkbox */
-    .checkmark {
-      position: absolute;
-      top: 0;
-      left: 20px;
-      height: 20px;
-      width: 20px;
-      background-color: #eee;
-    }
-
-    @media (max-width: 465px) {
-      .checkmark {
-        left: 0px;
-      }
-    }
-
-    /* On mouse-over, add a grey background color */
-    .wrapper-input:hover input ~ .checkmark {
-      background-color: #ccc;
-    }
-
-    /* When the checkbox is checked, add a blue background */
-    .wrapper-input input:checked ~ .checkmark {
-      background-color: #2196f3;
-    }
-
-    /* Create the checkmark/indicator (hidden when not checked) */
-    .checkmark:after {
-      content: '';
-      position: absolute;
-      display: none;
-    }
-
-    /* Show the checkmark when checked */
-    .wrapper-input input:checked ~ .checkmark:after {
-      display: block;
-    }
-
-    /* Style the checkmark/indicator */
-    .wrapper-input .checkmark:after {
-      left: 8px;
-      top: 4px;
-      width: 5px;
-      height: 10px;
-      border: solid white;
-      border-width: 0 3px 3px 0;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
-  </style>
-
-  <script>
-    var auth = document.getElementById('auth-input');
-
-    auth.addEventListener('input', function (event) {
-      if (auth.checked == true) {
-        console.log('auth-input', auth.checked);
-
-        document
-          .getElementById('modal-button')
-          .setAttribute('data-dismiss', 'modal');
-
-        document.getElementById('auth-span').style.border = 'none';
-        document.getElementById('auth-span').style.background = 'green';
-      }
-    });
-
-    function myFunction() {
-      document.getElementById('auth-span').style.border = '2px solid red';
-    }
-
-    (function () {
-      var btnSetItem = document.querySelector('.wrapper-input');
-
-      function setLocalStorage() {
-        btnSetItem.addEventListener('click', () => {
-          localStorage.setItem('modal', true);
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener('click', function () {
+          this.classList.toggle('active');
+          var panel = this.nextElementSibling;
+          if (panel.style.display === 'block') {
+            panel.style.display = 'none';
+          } else {
+            panel.style.display = 'block';
+          }
         });
       }
-
-      setLocalStorage();
-    })();
-  </script>
-
-  <script>
-    function fMasc(objeto, mascara) {
-      obj = objeto;
-      masc = mascara;
-      setTimeout('fMascEx()', 1);
-    }
-    function fMascEx() {
-      obj.value = masc(obj.value);
-    }
-    function mTel(tel) {
-      tel = tel.replace(/\D/g, '');
-      tel = tel.replace(/^(\d)/, '($1');
-      tel = tel.replace(/(.{3})(\d)/, '$1)$2');
-      if (tel.length == 9) {
-        tel = tel.replace(/(.{1})$/, '-$1');
-      } else if (tel.length == 10) {
-        tel = tel.replace(/(.{2})$/, '-$1');
-      } else if (tel.length == 11) {
-        tel = tel.replace(/(.{3})$/, '-$1');
-      } else if (tel.length == 12) {
-        tel = tel.replace(/(.{4})$/, '-$1');
-      } else if (tel.length > 12) {
-        tel = tel.replace(/(.{4})$/, '-$1');
-      }
-      return tel;
-    }
-    function mCNPJ(cnpj) {
-      cnpj = cnpj.replace(/\D/g, '');
-      cnpj = cnpj.replace(/^(\d{2})(\d)/, '$1.$2');
-      cnpj = cnpj.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
-      cnpj = cnpj.replace(/\.(\d{3})(\d)/, '.$1/$2');
-      cnpj = cnpj.replace(/(\d{4})(\d)/, '$1-$2');
-      return cnpj;
-    }
-    function mCPF(cpf) {
-      cpf = cpf.replace(/\D/g, '');
-      cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
-      cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
-      cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-      return cpf;
-    }
-    function mCEP(cep) {
-      cep = cep.replace(/\D/g, '');
-      cep = cep.replace(/^(\d{2})(\d)/, '$1.$2');
-      cep = cep.replace(/\.(\d{3})(\d)/, '.$1-$2');
-      return cep;
-    }
-    function mNum(num) {
-      num = num.replace(/\D/g, '');
-      return num;
-    }
-  </script>
-
-  <script type="text/javascript">
-    $(window).on('load', function () {
-      if (localStorage.getItem('modal') === null) {
-        $('#modal').modal('show');
-      }
-    });
-  </script>
+    </script>
+  </body>
 </html>
